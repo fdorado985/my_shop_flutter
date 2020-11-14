@@ -20,6 +20,10 @@ class ProductItem extends StatelessWidget {
           icon: Icon(Icons.favorite),
           onPressed: () {},
         ),
+        trailing: IconButton(
+          icon: Icon(Icons.shopping_cart),
+          onPressed: () {},
+        ),
         title: Text(
           title,
           textAlign: TextAlign.center,
