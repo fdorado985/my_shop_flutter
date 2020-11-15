@@ -177,13 +177,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                           return 'Please enter an image URL.';
                         }
 
-                        if (!value.startsWith('http') ||
+                        if (!value.startsWith('http') &&
                             !value.startsWith('https')) {
                           return 'Please enter a valid URL.';
                         }
 
-                        if (!value.endsWith('.png') ||
-                            !value.endsWith('.jpg') ||
+                        if (!value.endsWith('.png') &&
+                            !value.endsWith('.jpg') &&
                             !value.endsWith('.jpeg')) {
                           return 'Please enter a valid image URL.';
                         }
@@ -218,6 +218,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
 
   void _updateImageUrl() {
     if (!_imageUrlFocusNode.hasFocus) {
+      if ((!_imageUrlController.text.startsWith('http') &&
+              !_imageUrlController.text.startsWith('https')) ||
+          (!_imageUrlController.text.endsWith('.png') &&
+              !_imageUrlController.text.endsWith('.jpg') &&
+              !_imageUrlController.text.endsWith('.jpeg'))) {
+        return;
+      }
       setState(() {});
     }
   }
