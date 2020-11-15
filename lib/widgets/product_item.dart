@@ -46,6 +46,10 @@ class ProductItem extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   duration: Duration(seconds: 2),
+                  action: SnackBarAction(
+                    label: 'UNDO',
+                    onPressed: () {},
+                  ),
                 ),
               );
             },
