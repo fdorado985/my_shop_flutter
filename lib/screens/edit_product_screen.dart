@@ -119,6 +119,17 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 maxLines: 3,
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.multiline,
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Please enter a description.';
+                  }
+
+                  if (value.length < 10) {
+                    return 'Should be at least 10 characters long.';
+                  }
+
+                  return null;
+                },
                 onSaved: (newValue) {
                   _editedProduct = Product(
                     id: null,
