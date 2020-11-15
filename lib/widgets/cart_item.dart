@@ -21,6 +21,10 @@ class CartItem extends StatelessWidget {
         ),
         alignment: Alignment.centerRight,
         padding: const EdgeInsets.only(right: 20),
+        margin: const EdgeInsets.symmetric(
+          horizontal: 15,
+          vertical: 4,
+        ),
       ),
       child: Card(
         margin: const EdgeInsets.symmetric(
