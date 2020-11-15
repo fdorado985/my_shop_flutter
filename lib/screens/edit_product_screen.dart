@@ -86,6 +86,21 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.number,
                 focusNode: _priceFocusNode,
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Please enter a price.';
+                  }
+
+                  if (double.tryParse(value) == null) {
+                    return 'Please enter a valid number.';
+                  }
+
+                  if (double.parse(value) <= 0) {
+                    return 'Please enter a number greater than zero.';
+                  }
+
+                  return null;
+                },
                 onFieldSubmitted: (_) {
                   FocusScope.of(context).requestFocus(_descriptionFocusNode);
                 },
