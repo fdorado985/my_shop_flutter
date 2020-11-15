@@ -14,6 +14,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
   final _descriptionFocusNode = FocusNode();
   final _imageUrlController = TextEditingController();
   final _imageUrlFocusNode = FocusNode();
+  final _form = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -36,11 +37,17 @@ class _EditProductScreenState extends State<EditProductScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Edit Product'),
-        actions: [IconButton(icon: Icon(Icons.save), onPressed: () {})],
+        actions: [
+          IconButton(
+            icon: Icon(Icons.save),
+            onPressed: _saveForm,
+          )
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
+          key: _form,
           child: ListView(
             children: [
               TextFormField(
@@ -97,6 +104,9 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       textInputAction: TextInputAction.done,
                       controller: _imageUrlController,
                       focusNode: _imageUrlFocusNode,
+                      onFieldSubmitted: (_) {
+                        _saveForm();
+                      },
                       onEditingComplete: () {
                         setState(() {});
                       },
@@ -116,4 +126,6 @@ class _EditProductScreenState extends State<EditProductScreen> {
       setState(() {});
     }
   }
+
+  void _saveForm() {}
 }
