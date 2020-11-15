@@ -36,6 +36,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Edit Product'),
+        actions: [IconButton(icon: Icon(Icons.save), onPressed: () {})],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
