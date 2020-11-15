@@ -86,6 +86,9 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       keyboardType: TextInputType.url,
                       textInputAction: TextInputAction.done,
                       controller: _imageUrlController,
+                      onEditingComplete: () {
+                        setState(() {});
+                      },
                     ),
                   ),
                 ],
