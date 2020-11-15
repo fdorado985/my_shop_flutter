@@ -56,6 +56,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 keyboardType: TextInputType.multiline,
               ),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Container(
                     width: 100,
@@ -79,11 +80,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                             ),
                           ),
                   ),
-                  TextFormField(
-                    decoration: InputDecoration(labelText: 'Image URL'),
-                    keyboardType: TextInputType.url,
-                    textInputAction: TextInputAction.done,
-                    controller: _imageUrlController,
+                  Expanded(
+                    child: TextFormField(
+                      decoration: InputDecoration(labelText: 'Image URL'),
+                      keyboardType: TextInputType.url,
+                      textInputAction: TextInputAction.done,
+                      controller: _imageUrlController,
+                    ),
                   ),
                 ],
               ),
