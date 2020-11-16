@@ -18,4 +18,14 @@ See a complete app that replicate how a shop works, be familiar with how state m
 
 | Navigate between store or orders   | Expand your order to see a list of what includes |
 | ---------------------------------- | ------------------------------------------------ |
-| ![demo05](.screenshots/demo03.gif) | ![demo06](.screenshots/demo04.gif)               |
+| ![demo05](.screenshots/demo05.gif) | ![demo06](.screenshots/demo06.gif)               |
+
+---
+
+| Be able to manage your products    | Add new products to your cart      |
+| ---------------------------------- | ---------------------------------- |
+| ![demo01](.screenshots/demo07.gif) | ![demo02](.screenshots/demo08.gif) |
+
+| Edit your current products         | Remove the products                |
+| ---------------------------------- | ---------------------------------- |
+| ![demo03](.screenshots/demo09.gif) | ![demo04](.screenshots/demo10.gif) |
